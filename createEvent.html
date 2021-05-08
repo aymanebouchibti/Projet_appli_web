@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/styles.css"> 
+
+
+    <title>Eventoday - Creation evenement</title>
+  </head>
+  <body >
+      <div class="container">
+          <div class="py-5 text-center">
+            <h2><b>Bienvenue dans le menu de création d'événements :</b></h2>
+          </div>
+      </div>
+      
+      <!-- Informations générales -->
+      <div class="container">
+        <h3 class="mb-3"><b> informations générales </b></h3>
+        <form action="accueil.html" method="post">
+            
+          <div class="row g-4">
+                <!-- Titre de l'événement -->
+                <div class="col-sm-12">
+                  <label for="titre" class="form-label">Titre de l'événement * </label>
+                <textarea class="form-control" name="titre" placeholder="Insérez le titre" required></textarea> 
+                </div>
+                <!-- Titre de l'événement -->
+                
+            
+                <!-- Organisateur -->
+                <div class="col-sm-12">
+                  <label for="organisateur" class="form-label">Organisateur *</label>
+                  <textarea class="form-control" name="organisateur" placeholder="Organisateur" required></textarea> 
+                </div>
+                <!-- Organisateur -->
+                
+
+                <!-- Nature de l'evenenement -->
+                <div class="col-sm-6">
+                  <label for="type" class="form-label">De quoi s'agit-il ?</label>
+                  <select name="type" id="type" class="form-control">
+                    <option value="">---Choisir ---</option>
+                    <option value="attraction">Attraction</option>
+                    <option value="voyage">Voyage</option>
+                    <option value="competition">Compétition</option>
+                    <option value="gala">Dîner ou Gala</option>
+                    <option value="rencontre">Rencontre</option>
+                    <option value="culture">Culture et communauté</option>
+                    <option value="politique">Gouvernement et politique</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div> 
+              <!-- Nature de l'evenenement -->
+
+
+              <!-- Catégorie -->
+              <div class="col-sm-6">
+                <label for="Cathegorie" class="form-label">Cathégorie</label>
+                <select name="cathegorie" id="Cathegorie" class="form-control">
+                  <option value="">---Choisir une option---</option>
+                  <option value="sport">Sport et Fitness</option>
+                  <option value="famille">Famille et éducation</option>
+                  <option value="science">Science et technologie</option>
+                  <option value="celebration">Fêtes et célébrations</option>
+                  <option value="musique">Musique</option>
+                  <option value="culture">Culture et communauté</option>
+                  <option value="politique">Gouvernement et politique</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <!-- Catégorie -->
+
+
+              <!-- à propos de l'événement -->
+              <div class="col-sm-12">
+                <label for="description" class="form-label"> À propos de l'événement *</label>
+                <textarea class="form-control" name="description" placeholder="Description détaillé de l'événement" 
+                rows="15" required></textarea> 
+                <br>
+              </div>
+              <!-- à propos de l'événement  -->
+              
+                
+              <!-- Nombre maximum de personnes -->
+              <div class="col-sm-6">
+                <label for="max_personne" class="form-label">Nombre max de personnes:  </label>
+                <input type="number" name="nbmax" id="max_personne" placeholder="Ex: 50">
+              </div>
+              <!--  Nombre maximum de personnes -->
+
+
+
+              <!-- Prix du billet en € -->
+              <div class="col-sm-6">
+                <label for="prix" class="form-label"> Prix du billet en €:  </label>
+                <input type="number" name="prix" id="prix" placeholder="Ex: 10">
+              </div>
+              <!-- prix du billet en €  -->
+                
+
+            
+            <hr class="my-4">
+
+            <h3 class="mb-3"><b> Endroit </b> </h3>
+            <!-- Evenement en ligne--->
+            <div class="col-sm-6">
+                <label class="form-label"> Événement en ligne ? </label>
+
+                <div class="form-check">
+                  <input type="radio" name="enligne" value="presentiel" id="presentiel" class="form-check-input" checked> 
+                  <label for="presentiel">Oui</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" name="enligne" value="distanciel" id="distanciel" class="form-check-input"> 
+                  <label for="distanciel">Non</label>
+                </div>
+           </div>
+            <!-- Evenement en ligne -->
+            
+
+            <!-- Lieu -->
+            <div class="col-sm-6">
+              <label class="form-label"> Lieu *:</label>
+              <input type="text" name="lieu" placeholder="Tapez un lieu/adresse" class="form-control" required>
+            </div>
+            <!-- Lieu -->
+
+            <hr class="my-4">
+
+            <h3 class="mb-3"><b> Date et Heure </b> </h3>
+    
+            <!-- Date et Heure -->
+            <!-- Début-->
+            <div class="col-sm-6">
+              <label class="form-label"> Date de début :</label>
+              <input type="date" class="form-input-date" />
+            </div>
+
+            <div class="col-sm-6">
+              <label class="form-label"> Heure de début:</label>
+              <input type="time" />
+            </div>
+            <!-- Début-->
+
+            <!-- Fin-->
+            <div class="col-sm-6">
+              <label class="form-label"> Date de fin :</label>
+              <input type="date" class="form-input-date" />
+            </div>
+
+            <div class="col-sm-6">
+              <label class="form-label"> Heure de fin:</label>
+              <input type="time" />
+            </div>
+            <!-- Fin-->
+
+            <!-- Date et Heure -->
+
+            <hr class="my-4">
+
+            <div class="col-sm-4">
+              <button class="btn btn-primary btn-lg btn-block">Annuler</button>
+            </div>
+            
+            <div class="col-sm-8">
+              <button class="btn btn-primary btn-lg btn-block"> Sauvegarder et continuer</button>
+            </div>
+            
+
+          </div>
+        
+    </form>
+  </div>
+      
+
+
+    </section>
+
+    <!-- Fin informations générales -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
